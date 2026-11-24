@@ -1,0 +1,119 @@
+
+/* Admin Orders - Clean Modern Styling */
+
+.overflow-x-auto {
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+/* Table */
+.overflow-x-auto table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  border: none;
+}
+
+/* Table Header */
+.overflow-x-auto thead {
+  background: #f8fafc;
+}
+
+.overflow-x-auto thead th {
+  padding: 17px 20px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  white-space: nowrap;
+}
+
+/* Table Rows */
+.overflow-x-auto tbody tr {
+  background: #ffffff;
+  transition: background 0.2s ease;
+}
+
+.overflow-x-auto tbody tr:hover {
+  background: #f8faff;
+}
+
+/* Table Cells */
+.overflow-x-auto tbody td {
+  padding: 18px 20px;
+  border: none;
+  color: #475569;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+/* Subtle row separators */
+.overflow-x-auto tbody tr:not(:last-child) td {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Order ID */
+.overflow-x-auto tbody td:first-child {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* Customer name */
+.overflow-x-auto tbody td:nth-child(2) {
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Total price */
+.overflow-x-auto tbody td:nth-child(4) {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Status badges */
+.overflow-x-auto tbody td:nth-child(5) span {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 13px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Action button */
+.overflow-x-auto tbody td:last-child button {
+  border-radius: 9px;
+  padding: 9px 15px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.overflow-x-auto tbody td:last-child button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
+}
+
+/* Search and filter container */
+input,
+select {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.10);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .overflow-x-auto thead th,
+  .overflow-x-auto tbody td {
+    padding: 13px 14px;
+  }
+}
