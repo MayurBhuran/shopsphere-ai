@@ -1,6 +1,8 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
+
 import Navbar from "@/component/layout/navbar";
 import StoreSync from "@/component/StoreSync";
 import ShoppingAssistant from "@/features/assistant/components/ShoppingAssistant";
@@ -10,7 +12,7 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = Geist({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
@@ -27,8 +29,16 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
+        <Suspense
+          fallback={
+            <div className="h-16 bg-white border-b" />
+          }
+        >
+          <Navbar />
+        </Suspense>
+
         {children}
+
         <StoreSync />
         <ShoppingAssistant />
       </body>

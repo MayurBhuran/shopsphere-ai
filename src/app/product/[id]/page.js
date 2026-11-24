@@ -2,6 +2,10 @@
 import { getProducts } from "@/services/productService";
 import ProductDetailsClient from "@/component/products/ProductDetailsClient";
 
+// Product details depend on live API data.
+// Render this route at request time instead of prerendering it.
+export const instant = false;
+
 export default async function ProductPage({ params }) {
   const { id } = await params;
 
